@@ -1,12 +1,14 @@
 public class Notification {
 
-    Attachment attachment;
+    public String content;
+    private Attachment attachment;
+
+    public Notification(String content) {
+        this.content = content;
+    }
 
     public String getContent() {
-        if(this.attachment == null)
-            throw new IllegalStateException();
-
-        return attachment.toString(); // TODO: look over ( not right function )
+        return this.content;
     }
 
     public void setAttachment(Attachment a) {

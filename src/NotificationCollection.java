@@ -3,9 +3,10 @@ public class NotificationCollection implements NotificationCollectionIF {
     private Notification[] notifications = new Notification[10];
     private int length = 0;
 
+    //TODO: this function ( look over it )
     @Override
     public NotificationIteratorIF createIterator() {
-        return null; //TODO: placeholder
+        return new NotificationIterator(this.notifications);
     }
 
     public Notification getItem(int index) {
@@ -19,12 +20,10 @@ public class NotificationCollection implements NotificationCollectionIF {
     public void addItem(String str) {
         if(isFull())
             throw new StackOverflowError();
+        else if(isEmpty())
+            notifications[length++] = new Notification(str);
 
-        Notification notification = new Notification();
-
-        notification.setAttachment(new Attachment(1, str)); // TODO: this may be wrong
-
-        this.notifications[length++] = notification;
+        // something must be done here
     }
 
     public int getLength() {
@@ -32,14 +31,12 @@ public class NotificationCollection implements NotificationCollectionIF {
     }
 
     public void setAttachment(Attachment a, int index) {
-        //TODO: correct this code
-        if(index > length)
-            throw new StackOverflowError();
+        if(index > length || isEmpty())
+            throw new IndexOutOfBoundsException();
 
-        this.notifications[index].setAttachment(a); //TODO: look over
+        this.notifications[index].setAttachment(a);
     }
 
-    //TODO: combine getLength && isEmpty
     private boolean isEmpty() {
         return this.length == 0;
     }
