@@ -5,9 +5,10 @@ public class NotificationIterator implements NotificationIteratorIF{
         return false; //TODO: placeholder
     }
 
+    //TODO: this function
     @Override
     public Notification next() {
-        return null; //TODO: placeholder
+        return null;
     }
 
 }
