@@ -8,6 +8,7 @@ public class Notification {
     }
 
     public String getContent() {
+        System.out.println(attachment);
         return this.content;
     }
 

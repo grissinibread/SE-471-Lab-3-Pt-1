@@ -8,8 +8,16 @@ public class Demo {
             nc.addItem("Notification " + i);
         }
 
-        nb.printNotifications();
+        MediaAttachment media = new MediaAttachment(0, "Photo", 50);
+        FileAttachment file = new FileAttachment(1, "Document", 5);
 
-        //TODO: create attachments and link them to notifications in nc
+        for(int i = 0; i < 10; i++) {
+            if(i > 5)
+                nc.setAttachment(file, i);
+            if(i < 6)
+                nc.setAttachment(media, i);
+        }
+
+        nb.printNotifications();
     }
 }

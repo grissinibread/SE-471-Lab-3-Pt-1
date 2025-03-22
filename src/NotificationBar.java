@@ -11,7 +11,7 @@ public class NotificationBar {
 
         while(iterator.hasNext()) {
             Notification n = iterator.next();
-            System.out.println(n.getContent());
+            System.out.println(n.getContent() + '\n');
         }
     }
 }
