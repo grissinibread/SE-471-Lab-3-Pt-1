@@ -8,8 +8,8 @@ public class Notification {
     }
 
     public String getContent() {
-        System.out.println(attachment);
-        return this.content;
+        System.out.println(content + '\n');
+        return this.attachment.toString();
     }
 
     public void setAttachment(Attachment a) {

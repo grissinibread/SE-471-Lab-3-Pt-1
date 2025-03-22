@@ -10,6 +10,6 @@ public class FileAttachment extends Attachment {
     @Override
     public String toString() {
         this.preview();
-        return "Size: " + size_Byte + " bytes\n";
+        return "Size: " + size_Byte + " bytes";
     }
 }
