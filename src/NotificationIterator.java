@@ -1,8 +1,7 @@
 public class NotificationIterator implements NotificationIteratorIF{
 
-    private int counter = 0;
-
-    Notification[] notifications;
+    private final Notification[] notifications;
+    private int index = 0;
 
     public NotificationIterator(Notification[] notifications) {
         this.notifications = notifications;
@@ -10,12 +9,11 @@ public class NotificationIterator implements NotificationIteratorIF{
 
     @Override
     public boolean hasNext() {
-        return false; //TODO: placeholder
+        return this.notifications.length > this.index;
     }
 
-    //TODO: this function
     @Override
     public Notification next() {
-        return null;
+        return this.notifications[this.index++];
     }
 }

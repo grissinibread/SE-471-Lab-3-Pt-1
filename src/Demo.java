@@ -4,8 +4,12 @@ public class Demo {
         NotificationBar nb = new NotificationBar(nc);
 
         //TODO:  create Notifications and add them to nc
-        //TODO: create attachments and link them to notifications in nc
+        for(int i = 1; i <= 10; i++) {
+            nc.addItem("Notification " + i);
+        }
 
         nb.printNotifications();
+
+        //TODO: create attachments and link them to notifications in nc
     }
 }
