@@ -9,7 +9,6 @@ public class MediaAttachment extends Attachment{
 
     @Override
     public String toString() {
-        this.preview();
-        return "Length: " + length_Second + " seconds";
+        return super.toString() + "Length: " + length_Second + " seconds";
     }
 }

@@ -11,4 +11,9 @@ public class Attachment {
         System.out.println("Unique ID: " + this.uniqueID);
         System.out.println("Author: " + this.author);
     }
+
+    @Override
+    public String toString() {
+        return "Unique ID: " + this.uniqueID + '\n' + "Author: " + this.author + '\n';
+    }
 }

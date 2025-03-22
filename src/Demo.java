@@ -11,10 +11,12 @@ public class Demo {
         FileAttachment file = new FileAttachment(1, "Document", 5);
 
         for(int i = 0; i < 10; i++) {
-            if(i > 5)
+            if(i > 5) {
                 nc.setAttachment(file, i);
-            if(i < 6)
+            }
+            else {
                 nc.setAttachment(media, i);
+            }
         }
 
         nb.printNotifications();
